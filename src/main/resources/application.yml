@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    password: 157382
+  liquibase:
+    change-log: classpath:liquibase/master.xml
+    enabled: true
+
+mybatis-plus:
+? global-config:
+??? db-config:
+????? id-type: auto
+????? field-strategy: not_empty
+  ????? #ÍÕ·åÏÂ»®Ïß×ª»»
+????? column-underline: true
+  ????? #Âß¼­É¾³ýÅäÖÃ
+????? logic-delete-value: 0
+????? logic-not-delete-value: 1
+????? db-type: mysql
+??? refresh: false
+? configuration:
+??? map-underscore-to-camel-case: true
+??? cache-enabled: false
